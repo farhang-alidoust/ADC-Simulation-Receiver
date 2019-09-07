@@ -87,7 +87,7 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 		HAL_SPI_Receive_IT(&hspi2,data_rx,2);
 	
 	CDC_Transmit_FS(data_rx,2);
-	
+	HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_0);
 }
 
 /* USER CODE END 0 */
